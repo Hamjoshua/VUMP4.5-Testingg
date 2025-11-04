@@ -4,21 +4,33 @@
 ## Тестируемые объекты
 *Валидаторы*
 - ActionValidator 
-- -
+- - Valid READ should succeed
+- - Invalid action should fail
 - AuthValidator
-- -
+- - Valid credentials should succeed
+- - Invalid password should fail
+- - Unknown user should fail
 - PermissionValidator
-- -
+- - Direct permission should succeed
+- - Parent permission should succeed
+- - No permission should fail
 - ResourceExistenceValidator
-- -
+- - Existing resource should succeed
+- - Non-existing resource should fail
 - ResourceFormatValidator
-- -
+- - Valid path A B C should succeed
+- - Invalid char in path should fail
+- - Empty segment should fail
 - VolumeValidator
-- -
+- - Valid volume should succeed
+- - Volume exceeding limit should fail
+- - Negative volume should fail
 
 *Цепочка ответственности*
 - AccessControlService
-- -
+- - Full valid request should succeed
+- - Invalid login should fail
+- - No permission should fail
 
 ## Нетестируемые объекты
 - main(). Зависит от ввода аргументов
