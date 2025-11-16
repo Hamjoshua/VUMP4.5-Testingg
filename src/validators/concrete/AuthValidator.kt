@@ -8,10 +8,10 @@ import org.example.validators.ValidationContext
 import org.example.validators.ValidationResult
 
 
-class AuthValidator(
-    private val users: List<User>
-) : BaseValidator() {
+class AuthValidator : BaseValidator() {
     override fun handleSelf(context: ValidationContext): ValidationResult {
+        val users : List<User> = context.usersRepo.getAll()
+
         val user = users.find{it.login == context.login} ?: return ValidationResult.Failure(StatusCode.INVALID_LOGIN)
         val hashedInput = hashPassword(context.password, user.salt)
         if (hashedInput != user.passwordHash) {

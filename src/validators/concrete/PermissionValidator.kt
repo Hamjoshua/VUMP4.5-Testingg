@@ -7,10 +7,10 @@ import org.example.validators.BaseValidator
 import org.example.validators.ValidationContext
 import org.example.validators.ValidationResult
 
-class PermissionValidator(
-    private val permissions: List<Permission>
-) : BaseValidator() {
+class PermissionValidator: BaseValidator() {
     override fun handleSelf(context: ValidationContext): ValidationResult {
+        val permissions: List<Permission> = context.permissionsRepo.getAll()
+
         val userLogin = context.user?.login ?:
             return ValidationResult.Failure(StatusCode.INVALID_LOGIN)
         val action = context.requiredResourceAction
