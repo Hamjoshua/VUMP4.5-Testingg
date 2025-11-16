@@ -9,7 +9,30 @@ class SqliteResourceRepo(dbFilePath: String) : SqliteRepoBase(dbFilePath), IReso
     }
 
     override fun getAll(): List<Resource> {
-        TODO("Not yet implemented")
+        val resources : MutableList<Resource> = mutableListOf()
+
+        val sql = "select * from Resource"
+
+        _connection.createStatement().use {
+            val result = it.executeQuery(sql)
+            while(result.next()){
+                val parentId = result.getInt("parentId")
+                var parentResource : Resource? = null
+                if(parentId != 0){
+                    parentResource = resources[parentId - 1]
+                }
+
+                val dbRes = Resource(
+                    path = result.getString("path"),
+                    maxVolume = result.getInt("maxVolume"),
+                    parent = parentResource
+                )
+
+                resources.add(dbRes)
+            }
+        }
+
+        return resources.toList()
     }
 
     override fun getByPath(path: String): Resource? {
