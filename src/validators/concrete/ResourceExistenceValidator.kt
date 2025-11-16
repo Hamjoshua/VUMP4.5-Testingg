@@ -8,7 +8,7 @@ import org.example.validators.ValidationResult
 
 class ResourceExistenceValidator : BaseValidator() {
     override fun handleSelf(context: ValidationContext): ValidationResult {
-        val allResources : List<Resource> = context.resourcesRepo.getAll()
+        val allResources : List<Resource> = context.resourcesRepo!!.getAll()
 
         val resource = allResources.find { it.path == context.targetResource!!.path }
         if (resource == null) {

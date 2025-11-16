@@ -23,7 +23,7 @@ data class ValidationContext(
     var permission: Set<ResourceAction>? = null,   // после проверки прав
 
     // пристанище репозиторев. пока тут
-    var usersRepo: IUsersRepo,
-    var resourcesRepo: IResourcesRepo,
-    var permissionsRepo: IPermissionsRepo
+    var usersRepo: IUsersRepo?  = null,
+    var resourcesRepo: IResourcesRepo? = null,
+    var permissionsRepo: IPermissionsRepo? = null
 )

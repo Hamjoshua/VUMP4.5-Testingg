@@ -9,7 +9,7 @@ import org.example.validators.ValidationResult
 
 class PermissionValidator: BaseValidator() {
     override fun handleSelf(context: ValidationContext): ValidationResult {
-        val permissions: List<Permission> = context.permissionsRepo.getAll()
+        val permissions: List<Permission> = context.permissionsRepo!!.getAll()
 
         val userLogin = context.user?.login ?:
             return ValidationResult.Failure(StatusCode.INVALID_LOGIN)
