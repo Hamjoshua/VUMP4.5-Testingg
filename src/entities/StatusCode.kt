@@ -10,7 +10,8 @@ enum class StatusCode(val code: Int) {
     NON_EXISTENT_RESOURCE(6),
     INVALID_FORMAT(7),
     VOLUME_EXCEEDED(8),
-    DB_CONNECTION(code = 9);
+    DB_CONNECTION(code = 9),
+    INVALID_SQL_QUERY(code = 10);
 
     override fun toString(): String = "StatusCode($code)"
 }
