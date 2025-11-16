@@ -13,18 +13,18 @@ import org.example.validators.concrete.ResourceExistenceValidator
 import org.example.validators.concrete.ResourceFormatValidator
 import org.example.validators.concrete.VolumeValidator
 import org.example.mock.MockData
+import org.example.validators.concrete.SqliteDbValidator
 
 class AccessControlService(
-    private val users: List<User> = MockData.users,
-    private val resources: List<Resource> = MockData.resources,
-    private val permissions: List<Permission> = MockData.permissions
+    val dbFilePath : String = ""
 ) {
     private val validatorChain by lazy {
-        AuthValidator(users)
+        SqliteDbValidator(dbFilePath)
+            .setNext(AuthValidator())
             .setNext(ResourceFormatValidator())
             .setNext(ActionValidator())
-            .setNext(ResourceExistenceValidator(resources))
-            .setNext(PermissionValidator(permissions))
+            .setNext(ResourceExistenceValidator())
+            .setNext(PermissionValidator())
             .setNext(VolumeValidator())
     }
 
