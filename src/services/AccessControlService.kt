@@ -6,17 +6,19 @@ import org.example.validators.ValidationResult
 import org.example.validators.concrete.*
 
 class AccessControlService(
-    val dbFilePath : String = ""
+    val dbFilePath : String = "../../database.db"
 ) {
     private val validatorChain by lazy {
-        SqliteDbValidator(dbFilePath)
-            .setNext(DataQueryValidator())
+        val first = SqliteDbValidator(dbFilePath)
+        first.setNext(DataQueryValidator())
             .setNext(AuthValidator())
             .setNext(ResourceFormatValidator())
             .setNext(ActionValidator())
             .setNext(ResourceExistenceValidator())
             .setNext(PermissionValidator())
             .setNext(VolumeValidator())
+
+        return@lazy first
     }
 
     fun checkAccess(
