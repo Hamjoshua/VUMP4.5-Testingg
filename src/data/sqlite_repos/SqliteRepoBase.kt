@@ -2,7 +2,7 @@ package org.example.data.sqlite_repos
 
 import java.sql.*;
 
-class SqliteRepoBase(dbFilePath: String) {
+open class SqliteRepoBase(dbFilePath: String) {
     private lateinit var _connection : Connection
 
     init {
