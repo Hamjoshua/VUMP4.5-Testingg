@@ -31,6 +31,20 @@ KOTLINX_CLI_JVM_JAR=$(
                    2>/dev/null | head -n1
 )
 
+KOTLINX_OLD_STDLIB=$(
+    find lib -type f -name "kotlin-stdlib-1.9.10.jar" \
+                   ! -name "*-sources.jar" \
+                   ! -name "*-javadoc.jar" \
+                   2>/dev/null | head -n1
+)
+
+JDBC_JAR=$(
+    find lib -type f -name "sqlite-jdbc-*.jar" \
+                   ! -name "*-sources.jar" \
+                   ! -name "*-javadoc.jar" \
+                   2>/dev/null | head -n1
+)
+
 if [ ! -f "$KOTLINX_CLI_JVM_JAR" ]; then
     echo "JAR not found: $KOTLINX_CLI_JVM_JAR"
     exit 1
@@ -39,7 +53,7 @@ fi
 # Компиляция
 mkdir -p build/classes
 readarray -d '' KT_FILES < <(find src -name "*.kt" -print0)
-kotlinc -cp "$KOTLINX_CLI_JVM_JAR" "${KT_FILES[@]}" -d build/classes
+kotlinc -cp "$KOTLINX_CLI_JVM_JAR;$KOTLINX_OLD_STDLIB;$JDBC_JAR" "${KT_FILES[@]}" -d build/classes
 
 # Манифест
 echo "Main-Class: org.example.MainKt" > build/manifest.txt
@@ -48,6 +62,8 @@ echo "Main-Class: org.example.MainKt" > build/manifest.txt
 mkdir -p build/fat
 cp -r build/classes/* build/fat/
 unzip -q -o "$KOTLINX_CLI_JVM_JAR" -d build/fat/
+unzip -q -o "$KOTLINX_OLD_STDLIB" -d build/fat/
+unzip -q -o "$JDBC_JAR" -d build/fat/
 
 # Сборка JAR
 "$JAR_CMD" cfm access-control.jar build/manifest.txt -C build/fat .

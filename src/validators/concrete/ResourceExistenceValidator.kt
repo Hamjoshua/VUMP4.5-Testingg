@@ -10,7 +10,7 @@ class ResourceExistenceValidator : BaseValidator() {
     override fun handleSelf(context: ValidationContext): ValidationResult {
         val allResources : List<Resource> = context.resourcesRepo!!.getAll()
 
-        val resource = allResources.find { it.path == context.targetResource!!.path }
+        val resource = allResources.find { it.path == context.resourcePath }
         if (resource == null) {
             return ValidationResult.Failure(StatusCode.NON_EXISTENT_RESOURCE) // Несуществующий ресурс
         }
