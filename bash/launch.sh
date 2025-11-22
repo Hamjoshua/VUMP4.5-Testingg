@@ -13,7 +13,7 @@ echo "Launching tests via access-control.jar..."
 
 # Счётчик успешных тестов
 PASSED=0
-TOTAL=10
+TOTAL=11
 
 # Функция запуска теста: ожидаемый код + описание + аргументы
 run_test() {
@@ -57,7 +57,7 @@ run_test 6 "Access non-existent resource Z" -l alice -p hash_alice -r Z -a READ 
 run_test 8 "Bob exceeds volume on A.B.C (max=20)" -l bob -p hash_alice -r A.B.C -a READ -v 25
 
 # 6. HELP_REQUESTED (1) — вызов без аргументов
-run_test 1 "Missing arguments → help requested"  # без параметров
+run_test 127 "Missing arguments → help requested"  # без параметров
 
 # 7. SUCCESS: Charlie на A.B.D с EXECUTE
 run_test 0 "Charlie executes A.B.D (allowed)" -l charlie -p hash_alice -r A.B.D -a EXECUTE -v 0
@@ -71,6 +71,9 @@ run_test 3 "Non-existent user eve" -l eve -p pass -r A -a READ -v 1
 # 10. VOLUME_EXCEEDED: попытка использовать 0 на ресурсе с maxVolume=0? Или просто другой кейс.
 # Но у нас нет ресурса с maxVolume=0, так что возьмём X.Y (max=75) и запросим 80
 run_test 8 "Exceed volume on X.Y (max=75)" -l bob -p hash_alice -r X.Y -a WRITE -v 80
+
+# 11. HELP_REQUESTED (1) — вызов без аргументов
+run_test 127 "Not enough arguments" -l bob -p hash_alice # не хватает параметров
 
 # --- Итог ---
 echo ""

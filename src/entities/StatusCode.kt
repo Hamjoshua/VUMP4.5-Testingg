@@ -2,7 +2,7 @@ package org.example.entities
 
 enum class StatusCode(val code: Int) {
     SUCCESS(0),
-    HELP_REQUESTED(1),
+    HELP_REQUESTED(127),
     INVALID_PASSWORD(2),
     INVALID_LOGIN(3),
     UNKNOWN_ACTION(4),
