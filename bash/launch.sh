@@ -48,13 +48,13 @@ run_test 0 "Alice reads allowed resource A.B" -l alice -p hash_alice -r A.B -a R
 run_test 2 "Wrong password for alice" -l alice -p wrongpass -r A.B -a READ -v 1
 
 # 3. PERMISSION_DENIED (3)
-run_test 3 "Alice tries to WRITE on X (only READ allowed)" -l alice -p hash_alice -r X -a WRITE -v 1
+run_test 5 "Alice tries to WRITE on X (only READ allowed)" -l alice -p hash_alice -r X -a WRITE -v 1
 
 # 4. RESOURCE_NOT_FOUND (4)
-run_test 4 "Access non-existent resource Z" -l alice -p hash_alice -r Z -a READ -v 1
+run_test 6 "Access non-existent resource Z" -l alice -p hash_alice -r Z -a READ -v 1
 
 # 5. VOLUME_EXCEEDED (5)
-run_test 5 "Bob exceeds volume on A.B.C (max=20)" -l bob -p hash_alice -r A.B.C -a READ -v 25
+run_test 8 "Bob exceeds volume on A.B.C (max=20)" -l bob -p hash_alice -r A.B.C -a READ -v 25
 
 # 6. HELP_REQUESTED (1) — вызов без аргументов
 run_test 1 "Missing arguments → help requested"  # без параметров
@@ -63,14 +63,14 @@ run_test 1 "Missing arguments → help requested"  # без параметров
 run_test 0 "Charlie executes A.B.D (allowed)" -l charlie -p hash_alice -r A.B.D -a EXECUTE -v 0
 
 # 8. PERMISSION_DENIED: Bob на A.B (нет прав на A.B, только на A.B.C)
-run_test 3 "Bob accesses A.B (no permission)" -l bob -p hash_alice -r A.B -a READ -v 1
+run_test 5 "Bob accesses A.B (no permission)" -l bob -p hash_alice -r A.B -a READ -v 1
 
 # 9. AUTH_FAILED: несуществующий пользователь
 run_test 3 "Non-existent user eve" -l eve -p pass -r A -a READ -v 1
 
 # 10. VOLUME_EXCEEDED: попытка использовать 0 на ресурсе с maxVolume=0? Или просто другой кейс.
 # Но у нас нет ресурса с maxVolume=0, так что возьмём X.Y (max=75) и запросим 80
-run_test 5 "Exceed volume on X.Y (max=75)" -l bob -p hash_alice -r X.Y -a WRITE -v 80
+run_test 8 "Exceed volume on X.Y (max=75)" -l bob -p hash_alice -r X.Y -a WRITE -v 80
 
 # --- Итог ---
 echo ""
