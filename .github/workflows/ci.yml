@@ -35,11 +35,14 @@ jobs:
       - name: SonarQubeScan
         uses:
           SonarSource/sonarqube-scan-action@40f5b61913e891f9d316696628698051136015be
+        with:
+          args: >
+            -Dsonar.organization=hamjoshua           
+            -Dsonar.projectKey=Hamjoshua_VUMP4.5-Testingg
+            -Dsonar.sources=src
+            -Dsonar.host.url=https://sonarcloud.io
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-          SONAR_HOST_URL: https://sonarcloud.io
-          SONAR_PROJECT_KEY: Hamjoshua_VUMP4.5-Testingg
-          SONAR_ORGANIZATION: hamjoshua
 
       - name: Notify Telegram (success)
         if: success()
