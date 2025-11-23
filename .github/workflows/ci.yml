@@ -45,16 +45,26 @@ jobs:
 
       - name: Notify Telegram (success)
         if: success()
-        uses: appleboy/telegram-action@v2
+        uses: appleboy/telegram-action@1b2bf60368dcf9d8375bd26bee6c94649f670968
         with:
           to: ${{ secrets.TELEGRAM_CHAT_ID }}
           token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          message: "✅ CI passed for PR!"
+          message: |
+            New push to main branch!
+            Repository: ${{ github.repository }}
+            Commit: ${{ github.sha }}
+            Author: ${{ github.actor }}
+            "✅ CI passed for PR!"
 
       - name: Notify Telegram (failure)
         if: failure()
-        uses: appleboy/telegram-action@v2
+        uses: appleboy/telegram-action@1b2bf60368dcf9d8375bd26bee6c94649f670968
         with:
           to: ${{ secrets.TELEGRAM_CHAT_ID }}
           token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          message: "❌ CI failed for PR!"
+          message: |
+            New push to main branch!
+            Repository: ${{ github.repository }}
+            Commit: ${{ github.sha }}
+            Author: ${{ github.actor }}
+            ❌ CI failed for PR!
