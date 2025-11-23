@@ -41,8 +41,8 @@ jobs:
           context: .
           push: true
           tags: |
-            ${{ secrets.DOCKER_HUB_USERNAME }}/myapp:${{ steps.vars.outputs.tag }}
-            ${{ secrets.DOCKER_HUB_USERNAME }}/myapp:latest
+            ${{ vars.DOCKERHUB_USERNAME }}/myapp:${{ github.sha }}
+            ${{ vars.DOCKERHUB_USERNAME }}/myapp:latest
 
       - name: Create GitHub Release
         uses: actions/create-release@v1
