@@ -81,7 +81,7 @@ class AllValidatorsTest {
 
     @Test
     fun `AuthValidator - unknown user should fail`() {
-        val context = createContextWithUsersRepo().apply { this.password = "secret"; this.login = "bob" }
+        val context = createContextWithUsersRepo().apply { this.login = "bob" }
         val result = AuthValidator().handle(context)
         assertTrue(result is ValidationResult.Failure)
         assertEquals(StatusCode.INVALID_LOGIN, (result as ValidationResult.Failure).exitCode)
