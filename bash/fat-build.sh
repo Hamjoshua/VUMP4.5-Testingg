@@ -51,9 +51,15 @@ if [ ! -f "$KOTLINX_CLI_JVM_JAR" ]; then
 fi
 
 # Компиляция
+SEP=":"
+if [[ "$(uname -o 2>/dev/null)" = "Msys" ]] || [[ "$(uname -s 2>/dev/null)" == *NT* ]]; then
+    SEP=";"
+fi
+
 mkdir -p build/classes
 readarray -d '' KT_FILES < <(find src -name "*.kt" -print0)
-kotlinc -cp "$KOTLINX_CLI_JVM_JAR;$KOTLINX_OLD_STDLIB;$JDBC_JAR" "${KT_FILES[@]}" -d build/classes
+CP="$KOTLINX_CLI_JVM_JAR$SEP$KOTLINX_OLD_STDLIB$SEP$JDBC_JAR"
+kotlinc -cp "$CP" "${KT_FILES[@]}" -d build/classes
 
 # Манифест
 echo "Main-Class: org.example.MainKt" > build/manifest.txt
