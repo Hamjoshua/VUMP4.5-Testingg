@@ -28,3 +28,33 @@ jobs:
 
       - name: Run full app tests
         run: ./bash/launch.sh
+
+  sonar-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: SonarCloud Scan
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        run: |
+          sonar-scanner \
+          -Dsonar.projectKey=your_github_username_your_repo_name \
+          -Dsonar.organization=your_sonar_org \
+          -Dsonar.sources=src \
+          -Dsonar.host.url=https://sonarcloud.io
+
+      - name: Notify Telegram (success)
+        if: success()
+        uses: appleboy/telegram-action@v2
+        with:
+          to: ${{ secrets.TELEGRAM_CHAT_ID }}
+          token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          message: "✅ CI passed for PR!"
+
+      - name: Notify Telegram (failure)
+        if: failure()
+        uses: appleboy/telegram-action@v2
+        with:
+          to: ${{ secrets.TELEGRAM_CHAT_ID }}
+          token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          message: "❌ CI failed for PR!"
