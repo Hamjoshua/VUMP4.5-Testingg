@@ -32,16 +32,11 @@ jobs:
   sonar-check:
     runs-on: ubuntu-latest
     steps:
-      - name: SonarCloud Scan
+      - name: SonarQubeScan
+        uses:
+          SonarSource/sonarqube-scan-action@v6
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        run: |
-          sonar-scanner \
-          -Dsonar.projectKey=your_github_username_your_repo_name \
-          -Dsonar.organization=your_sonar_org \
-          -Dsonar.sources=src \
-          -Dsonar.host.url=https://sonarcloud.io
 
       - name: Notify Telegram (success)
         if: success()
