@@ -24,7 +24,7 @@ jobs:
         run: ./bash/fetch-lib.sh
 
       - name: Build project
-        run: ./bash/build.sh
-        
+        run: ./bash/fat-build.sh
+
       - name: Run full app tests
         run: ./bash/launch.sh
