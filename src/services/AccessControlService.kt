@@ -6,7 +6,7 @@ import org.example.validators.ValidationResult
 import org.example.validators.concrete.*
 
 class AccessControlService(
-    val dbFilePath : String = "db\\database.db"
+    val dbFilePath : String = "db/database.db"
 ) {
     private val validatorChain by lazy {
         val first = SqliteDbValidator(dbFilePath)
