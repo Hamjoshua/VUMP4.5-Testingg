@@ -63,8 +63,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./app.jar
-          asset_name: app.jar
+          asset_path: ./access-control.jar
+          asset_name: access-control.jar
           asset_content_type: application/java-archive
 
       - name: Telegram notification
