@@ -42,5 +42,6 @@
     <orderEntry type="library" name="junit.platform.console.standalone" level="project" />
     <orderEntry type="library" name="xerial.sqlite.jdbc" level="project" />
     <orderEntry type="library" name="jetbrains.kotlin.stdlib" level="project" />
+    <orderEntry type="library" name="io.mockk.jvm" level="project" />
   </component>
 </module>

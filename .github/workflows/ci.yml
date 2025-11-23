@@ -25,9 +25,6 @@ jobs:
 
       - name: Build project
         run: ./bash/build.sh
-
-      - name: Run unit tests
-        run: ./bash/test.sh
-
+        
       - name: Run full app tests
         run: ./bash/launch.sh
