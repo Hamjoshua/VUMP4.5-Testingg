@@ -21,7 +21,7 @@ jobs:
           distribution: 'temurin'
 
       - name: Fetch lib folder
-        run: ./bash/fetch-lib.js
+        run: ./bash/fetch-lib.sh
 
       - name: Build project
         run: ./bash/build.sh
