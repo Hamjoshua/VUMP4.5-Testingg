@@ -29,20 +29,9 @@ jobs:
       - name: Run full app tests
         run: ./bash/launch.sh
 
-  sonar-check:
+  telegram-notify:
     runs-on: ubuntu-latest
     steps:
-      - name: SonarQubeScan
-        uses:
-          SonarSource/sonarqube-scan-action@40f5b61913e891f9d316696628698051136015be
-        with:
-          args: >
-            -Dsonar.organization=hamjoshua           
-            -Dsonar.projectKey=Hamjoshua_VUMP4.5-Testingg
-            -Dsonar.host.url=https://sonarcloud.io
-        env:
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-
       - name: Notify Telegram (success)
         if: success()
         uses: appleboy/telegram-action@1b2bf60368dcf9d8375bd26bee6c94649f670968
