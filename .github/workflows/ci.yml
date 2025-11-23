@@ -11,6 +11,9 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
+      - name: Make scripts executable
+        run: chmod +x bash/*.sh
+
       - name: Set up JDK 17
         uses: actions/setup-java@v2
         with:
