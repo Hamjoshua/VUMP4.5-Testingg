@@ -18,7 +18,8 @@ class AllValidatorsTest {
 
     // --- Test data factories ---
     fun getUsers(): List<User> =
-        listOf(User(id = 1, login = "alice", passwordHash = hashPassword("secret", "salt123"), salt = "salt123"))
+        listOf(User(id = 1, login = "alice", passwordHash = hashPassword("secret", "salt123"), salt = "salt123"),
+            User(id = 1, login = "bob", passwordHash = hashPassword("another", "salt123"), salt = "salt123"))
 
     fun getResources(): List<Resource> =
         listOf(Resource(id = 1, path = "A.B", maxVolume = 1000))
@@ -64,7 +65,7 @@ class AllValidatorsTest {
     // --- AuthValidator ---
     @Test
     fun `AuthValidator - valid credentials should succeed`() {
-        val context = createContextWithUsersRepo().apply { this.password = "secret"; this.login = "alice" }
+        val context = createContextWithUsersRepo().apply { this.login = "alice" }
         val result = AuthValidator().handle(context)
         assertTrue(result is ValidationResult.Success)
         assertEquals("alice", context.user?.login)
@@ -72,7 +73,7 @@ class AllValidatorsTest {
 
     @Test
     fun `AuthValidator - invalid password should fail`() {
-        val context = createContextWithUsersRepo().apply { this.password = "wrong"; this.login = "alice" }
+        val context = createContextWithUsersRepo().apply { this.login = "bob" }
         val result = AuthValidator().handle(context)
         assertTrue(result is ValidationResult.Failure)
         assertEquals(StatusCode.INVALID_PASSWORD, (result as ValidationResult.Failure).exitCode)
