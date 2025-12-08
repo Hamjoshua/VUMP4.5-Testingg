@@ -39,6 +39,7 @@
         <dependency>
             <groupId>org.junit.platform</groupId>
             <artifactId>junit-platform-console-standalone</artifactId>
+            <version>1.12.0</version>
         </dependency>
 
         <dependency>
