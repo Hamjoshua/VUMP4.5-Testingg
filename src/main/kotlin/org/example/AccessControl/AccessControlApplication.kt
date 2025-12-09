@@ -3,6 +3,7 @@ import kotlinx.cli.*
 import org.example.AccessControl.entities.StatusCode
 import org.example.AccessControl.services.AccessControlService
 import org.example.AccessControl.validators.ValidationContext
+import org.slf4j.LoggerFactory
 import org.springframework.boot.CommandLineRunner
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
@@ -10,6 +11,7 @@ import kotlin.system.exitProcess
 
 @SpringBootApplication
 class SpringBootConsoleApplication: CommandLineRunner {
+    private val logger = LoggerFactory.getLogger(AccessControlService::class.java)
     override fun run(vararg args: String) {
         val parser = ArgParser("example")
         val login by parser.option(ArgType.String, shortName = "l", description = "User login").required()
@@ -20,6 +22,7 @@ class SpringBootConsoleApplication: CommandLineRunner {
         try {
             parser.parse(args)
         } catch (e: Exception) {
+            logger.error("Ошибка: ${e.message}")
             // val helpArg = args + "-h"
             // parser.parse(helpArg) // я буквально не придумал ничего лучше. Господи прости за это... да нормуль!!
             // exitProcess(StatusCode.HELP_REQUESTED.code)
@@ -32,8 +35,11 @@ class SpringBootConsoleApplication: CommandLineRunner {
             action = action,
             volume = volume
         )
-
-        exitProcess(AccessControlService().checkAccess(context).code)
+        // logger.info("while (True) \n print(\"Aboba\")")
+        // print("while (True) \n print(\"Aboba\")") прикол от Стаса
+        val code = AccessControlService().checkAccess(context).code
+        logger.info(code.toString())
+        exitProcess(code)
     }
 
     companion object {

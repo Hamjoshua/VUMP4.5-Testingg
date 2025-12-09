@@ -7,11 +7,9 @@ import org.example.AccessControl.validators.concrete.*
 import org.springframework.stereotype.Service
 
 @Service
-class AccessControlService(
-    val dbFilePath : String = "db/database.db"
-) {
+class AccessControlService() {
     private val validatorChain by lazy {
-        val first = SqliteDbValidator(dbFilePath)
+        val first = SqliteDbValidator()
         first.setNext(DataQueryValidator())
             .setNext(AuthValidator())
             .setNext(ResourceFormatValidator())

@@ -3,11 +3,12 @@ package org.example.AccessControl.data.sqlite_repos
 import data.interfaces.IPermissionsRepo
 import org.example.AccessControl.entities.Permission
 import org.example.AccessControl.entities.ResourceAction
+import org.springframework.beans.factory.annotation.Value
 import org.springframework.stereotype.Repository
 import java.sql.ResultSet
 
 @Repository
-class SqlitePermissionsRepo(dbFilePath: String) : SqliteRepoBase(dbFilePath), IPermissionsRepo {
+class SqlitePermissionsRepo(@Value("\${app.db.path}") dbFilePath: String = "") : SqliteRepoBase(dbFilePath), IPermissionsRepo {
 
     override fun getById(id: Int): Permission? {
         val sql = "SELECT * FROM permissions WHERE id = ?"

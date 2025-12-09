@@ -1,10 +1,10 @@
 package org.example.AccessControl.validators.concrete
 
-import org.example.entities.AccessControl.ResourceAction
-import org.example.entities.AccessControl.StatusCode
-import org.example.validators.AccessControl.BaseValidator
-import org.example.validators.AccessControl.ValidationContext
-import org.example.validators.AccessControl.ValidationResult
+import org.example.AccessControl.entities.ResourceAction
+import org.example.AccessControl.entities.StatusCode
+import org.example.AccessControl.validators.BaseValidator
+import org.example.AccessControl.validators.ValidationContext
+import org.example.AccessControl.validators.ValidationResult
 import org.springframework.stereotype.Service
 
 @Service

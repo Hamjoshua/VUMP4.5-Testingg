@@ -10,14 +10,12 @@ import org.example.AccessControl.validators.ValidationResult
 import org.springframework.stereotype.Service
 
 @Service
-class SqliteDbValidator(
-    val dbFilePath : String
-) : BaseValidator() {
+class SqliteDbValidator() : BaseValidator() {
     override fun handleSelf(context: ValidationContext): ValidationResult {
         try {
-            context.resourcesRepo = SqliteResourceRepo(dbFilePath)
-            context.permissionsRepo = SqlitePermissionsRepo(dbFilePath)
-            context.usersRepo = SqliteUsersRepo(dbFilePath)
+            context.resourcesRepo = SqliteResourceRepo()
+            context.permissionsRepo = SqlitePermissionsRepo()
+            context.usersRepo = SqliteUsersRepo()
         }
         catch (e : Exception){
             return ValidationResult.Failure(exitCode = StatusCode.DB_CONNECTION)

@@ -2,10 +2,12 @@ package org.example.AccessControl.data.sqlite_repos
 
 import data.interfaces.IResourcesRepo
 import org.example.AccessControl.entities.Resource
+import org.springframework.beans.factory.annotation.Value
 import org.springframework.stereotype.Repository
 
 @Repository
-class SqliteResourceRepo(dbFilePath: String) : SqliteRepoBase(dbFilePath), IResourcesRepo {
+class SqliteResourceRepo(@Value("\${app.db.path}") dbFilePath: String = "")
+    : SqliteRepoBase(dbFilePath), IResourcesRepo {
 
     override fun getById(id: Int): Resource? {
         val sql = "SELECT * FROM resources WHERE id = ?"

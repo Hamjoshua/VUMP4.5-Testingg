@@ -2,10 +2,12 @@ package org.example.AccessControl.data.sqlite_repos
 
 import data.interfaces.IUsersRepo
 import org.example.AccessControl.entities.User
+import org.springframework.beans.factory.annotation.Value
 import org.springframework.stereotype.Repository
 
 @Repository
-class SqliteUsersRepo(dbFilePath: String) : SqliteRepoBase(dbFilePath), IUsersRepo {
+class SqliteUsersRepo(@Value("\${app.db.path}") dbFilePath: String = "")
+    : SqliteRepoBase(dbFilePath), IUsersRepo {
     override fun getById(id: Int): User? {
         val sql = "SELECT * FROM users WHERE id = ?"
 
