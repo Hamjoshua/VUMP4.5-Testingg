@@ -37,7 +37,10 @@ class SpringBootConsoleApplication: CommandLineRunner {
     }
 }
 
-
-fun main(args: Array<String>) {
-    runApplication<AccessControlService>(*args)
+companion object {
+    @JvmStatic
+    fun main(args: Array<String>) {
+        runApplication<SpringBootConsoleApplication>(*args)
+    }
 }
+
