@@ -4,6 +4,8 @@ import org.example.entities.StatusCode
 import org.example.validators.ValidationContext
 import org.example.validators.ValidationResult
 import org.example.validators.concrete.*
+import org.springframework.stereotype.Service
+
 
 class AccessControlService(
     val dbFilePath : String = "db/database.db"

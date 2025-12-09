@@ -6,7 +6,9 @@ import org.example.entities.StatusCode
 import org.example.validators.BaseValidator
 import org.example.validators.ValidationContext
 import org.example.validators.ValidationResult
+import org.springframework.stereotype.Service
 
+@Service
 class PermissionValidator: BaseValidator() {
     override fun handleSelf(context: ValidationContext): ValidationResult {
         val permissions: List<Permission> = context.permissionsRepo!!.getAll()

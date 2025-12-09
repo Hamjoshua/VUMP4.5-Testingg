@@ -4,7 +4,9 @@ import org.example.entities.StatusCode
 import org.example.validators.BaseValidator
 import org.example.validators.ValidationContext
 import org.example.validators.ValidationResult
+import org.springframework.stereotype.Service
 
+@Service
 class DataQueryValidator : BaseValidator() {
     override fun handleSelf(context: ValidationContext): ValidationResult {
         try {

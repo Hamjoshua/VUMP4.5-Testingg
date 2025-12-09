@@ -6,8 +6,9 @@ import org.example.functions.hashPassword
 import org.example.validators.BaseValidator
 import org.example.validators.ValidationContext
 import org.example.validators.ValidationResult
+import org.springframework.stereotype.Service
 
-
+@Service
 class AuthValidator : BaseValidator() {
     override fun handleSelf(context: ValidationContext): ValidationResult {
         val users : List<User> = context.usersRepo!!.getAll()
