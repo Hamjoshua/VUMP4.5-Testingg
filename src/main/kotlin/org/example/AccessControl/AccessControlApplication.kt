@@ -1,8 +1,8 @@
 package org.example.AccessControl
 import kotlinx.cli.*
-import org.example.entities.StatusCode
-import org.example.services.AccessControlService
-import org.example.validators.ValidationContext
+import org.example.AccessControl.entities.StatusCode
+import org.example.AccessControl.services.AccessControlService
+import org.example.AccessControl.validators.ValidationContext
 import org.springframework.boot.CommandLineRunner
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
