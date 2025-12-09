@@ -1,9 +1,10 @@
 package org.example.AccessControl.mock
-import org.example.entities.Permission
-import org.example.entities.Resource
-import org.example.entities.ResourceAction
-import org.example.entities.User
-import functions.hashPassword
+
+import org.example.AccessControl.entities.Permission
+import org.example.AccessControl.entities.Resource
+import org.example.AccessControl.entities.ResourceAction
+import org.example.AccessControl.entities.User
+import org.example.AccessControl.functions.hashPassword
 
 object MockData {
     val users = listOf(
