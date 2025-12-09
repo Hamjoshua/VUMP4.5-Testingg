@@ -2,7 +2,9 @@ package org.example.data.sqlite_repos
 
 import org.example.data.interfaces.IUsersRepo
 import org.example.entities.User
+import org.springframework.stereotype.Repository
 
+@Repository
 class SqliteUsersRepo(dbFilePath: String) : SqliteRepoBase(dbFilePath), IUsersRepo {
     override fun getById(id: Int): User? {
         val sql = "SELECT * FROM users WHERE id = ?"

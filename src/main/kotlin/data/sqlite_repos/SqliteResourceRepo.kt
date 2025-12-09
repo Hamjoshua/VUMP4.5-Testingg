@@ -2,7 +2,9 @@ package org.example.data.sqlite_repos
 
 import org.example.data.interfaces.IResourcesRepo
 import org.example.entities.Resource
+import org.springframework.stereotype.Repository
 
+@Repository
 class SqliteResourceRepo(dbFilePath: String) : SqliteRepoBase(dbFilePath), IResourcesRepo {
 
     override fun getById(id: Int): Resource? {

@@ -6,7 +6,7 @@ import org.example.validators.ValidationResult
 import org.example.validators.concrete.*
 import org.springframework.stereotype.Service
 
-
+@Service
 class AccessControlService(
     val dbFilePath : String = "db/database.db"
 ) {

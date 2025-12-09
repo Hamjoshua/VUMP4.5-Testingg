@@ -3,7 +3,9 @@ package org.example.data.sqlite_repos
 import org.example.data.interfaces.IPermissionsRepo
 import org.example.entities.Permission
 import org.example.entities.ResourceAction
+import org.springframework.stereotype.Repository
 
+@Repository
 class SqlitePermissionsRepo(dbFilePath: String) : SqliteRepoBase(dbFilePath), IPermissionsRepo {
 
     override fun getById(id: Int): Permission? {
