@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b0100a52-cddc-4021-a652-58d4ddfee18c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/logback-spring.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/data/sqlite_repos/SqlitePermissionsRepo.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/data/sqlite_repos/SqlitePermissionsRepo.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/data/sqlite_repos/SqliteRepoBase.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/data/sqlite_repos/SqliteRepoBase.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/data/sqlite_repos/SqliteResourceRepo.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/data/sqlite_repos/SqliteResourceRepo.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/data/sqlite_repos/SqliteUsersRepo.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/data/sqlite_repos/SqliteUsersRepo.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/example/AccessControl/AccessControlApplication.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/example/AccessControl/AccessControlApplication.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/services/AccessControlService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/services/AccessControlService.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/validators/concrete/ActionValidator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/validators/concrete/ActionValidator.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/validators/concrete/SqliteDbValidator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/validators/concrete/SqliteDbValidator.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/validators/concrete/VolumeValidator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/validators/concrete/VolumeValidator.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin Interface" />
+        <option value="Kotlin Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Hamjoshua&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Hamjoshua/VUMP4.5-Testingg.git&quot;,
+    &quot;accountId&quot;: &quot;addc0e7e-de6c-48fa-987b-0876fff62928&quot;
+  }
+}</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="3500EEl0EjvtEiDcGQkD5glp8fb" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "true",
+    "JUnit.AllValidatorsTest.AccessControlService - no permission should fail.executor": "Run",
+    "JUnit.TestActionValidator.executor": "Run",
+    "Kotlin.MainKt (1).executor": "Run",
+    "Kotlin.MainKt.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "SHELLCHECK.PATH": "I do mind",
+    "git-widget-placeholder": "core/maven-springboot",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/REPOS/VUMP4.5-Testingg",
+    "onboarding.tips.debug.path": "D:/REPOS/VUMP4.5-Testingg/src/Main.kt",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.39744613",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\REPOS\VUMP4.5-Testingg" />
+      <recent name="D:\REPOS\VUMP4.5-Testingg\lib" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\REPOS\VUMP4.5-Testingg\src" />
+      <recent name="D:\REPOS\VUMP4.5-Testingg\src\main\java" />
+      <recent name="D:\REPOS\VUMP4.5-Testingg\.github\workflows" />
+    </key>
+    <key name="CreateKotlinClassDialog.RecentsKey">
+      <recent name="data.sqlite_repos" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Kotlin.MainKt">
+    <configuration name="AllValidatorsTest.AccessControlService - no permission should fail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="VUMP4.5-Testingg" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.AllValidatorsTest" />
+      <option name="METHOD_NAME" value="AccessControlService - no permission should fail" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AllValidatorsTest.AccessControlService - no permission should fail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="VUMP4.5-Testingg" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.AllValidatorsTest" />
+      <option name="METHOD_NAME" value="AccessControlService - no permission should fail" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainKt (1)" type="JetRunConfigurationType">
+      <option name="MAIN_CLASS_NAME" value="org.example.MainKt" />
+      <module name="VUMP4.5-Testingg" />
+      <option name="PROGRAM_PARAMETERS" value="-h" />
+      <shortenClasspath name="NONE" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.MainKt" />
+      <shortenClasspath name="NONE" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.MainKt" />
+      <module name="VUMP4.5-Testingg" />
+      <shortenClasspath name="NONE" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="JUnit.AllValidatorsTest.AccessControlService - no permission should fail" />
+      <item itemvalue="Kotlin.MainKt (1)" />
+      <item itemvalue="Kotlin.MainKt" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Kotlin.MainKt" />
+        <item itemvalue="JUnit.AllValidatorsTest.AccessControlService - no permission should fail" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b0100a52-cddc-4021-a652-58d4ddfee18c" name="Changes" comment="" />
+      <created>1762231576137</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1762231576137</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/kotlin/validators/concrete/ResourceExistenceValidator.kt</url>
+          <line>13</line>
+          <properties>
+            <option name="lambda-ordinal" value="-1" />
+          </properties>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/kotlin/Main.kt</url>
+          <line>9</line>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
