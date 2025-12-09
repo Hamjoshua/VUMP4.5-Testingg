@@ -1,4 +1,5 @@
 package data.interfaces
+
 import org.example.AccessControl.entities.User
 
 interface IUsersRepo {

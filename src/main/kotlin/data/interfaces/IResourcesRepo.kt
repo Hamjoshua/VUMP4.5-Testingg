@@ -1,6 +1,6 @@
 package data.interfaces
 
-import org.example.entities.Resource
+import org.example.AccessControl.entities.Resource
 
 interface IResourcesRepo {
     fun getById(id: Int): Resource?

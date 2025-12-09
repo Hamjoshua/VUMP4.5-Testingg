@@ -1,5 +1,6 @@
 package data.interfaces
-import org.example.entities.Permission
+
+import org.example.AccessControl.entities.Permission
 
 interface IPermissionsRepo {
     fun getById(id: Int): Permission?
