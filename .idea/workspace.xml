@@ -5,36 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b0100a52-cddc-4021-a652-58d4ddfee18c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/MockData.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/data/MockData.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/interfaces/IPermissionsRepo.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/data/interfaces/IPermissionsRepo.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/interfaces/IResourcesRepo.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/data/interfaces/IResourcesRepo.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/interfaces/IUsersRepo.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/data/interfaces/IUsersRepo.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/sqlite_repos/SqlitePermissionsRepo.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/data/sqlite_repos/SqlitePermissionsRepo.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/sqlite_repos/SqliteRepoBase.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/data/sqlite_repos/SqliteRepoBase.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/sqlite_repos/SqliteResourceRepo.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/data/sqlite_repos/SqliteResourceRepo.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/sqlite_repos/SqliteUsersRepo.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/data/sqlite_repos/SqliteUsersRepo.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entities/Permission.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/entities/Permission.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entities/Resource.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/entities/Resource.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entities/ResourceAction.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/entities/ResourceAction.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entities/StatusCode.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/entities/StatusCode.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entities/User.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/entities/User.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/functions/functions.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/functions/functions.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/AccessControlService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/services/AccessControlService.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/validators/BaseValidator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/validators/BaseValidator.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/validators/IValidator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/validators/IValidator.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/validators/ValidationContext.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/validators/ValidationContext.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/validators/ValidationResult.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/validators/ValidationResult.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/validators/concrete/ActionValidator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/validators/concrete/ActionValidator.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/validators/concrete/AuthValidator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/validators/concrete/AuthValidator.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/validators/concrete/DataQueryValidator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/validators/concrete/DataQueryValidator.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/validators/concrete/PermissionValidator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/validators/concrete/PermissionValidator.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/validators/concrete/ResourceExistenceValidator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/validators/concrete/ResourceExistenceValidator.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/validators/concrete/ResourceFormatValidator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/validators/concrete/ResourceFormatValidator.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/validators/concrete/SqliteDbValidator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/validators/concrete/SqliteDbValidator.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/validators/concrete/VolumeValidator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/validators/concrete/VolumeValidator.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/services/AccessControlService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/services/AccessControlService.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/validators/concrete/ActionValidator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/validators/concrete/ActionValidator.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/validators/concrete/AuthValidator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/validators/concrete/AuthValidator.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/validators/concrete/DataQueryValidator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/validators/concrete/DataQueryValidator.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/validators/concrete/PermissionValidator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/validators/concrete/PermissionValidator.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/validators/concrete/ResourceExistenceValidator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/validators/concrete/ResourceExistenceValidator.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/validators/concrete/ResourceFormatValidator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/validators/concrete/ResourceFormatValidator.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/validators/concrete/SqliteDbValidator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/validators/concrete/SqliteDbValidator.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/validators/concrete/VolumeValidator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/validators/concrete/VolumeValidator.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
