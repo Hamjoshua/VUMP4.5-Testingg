@@ -1,4 +1,4 @@
-package org.example
+package org.example.AccessControl
 import kotlinx.cli.*
 import org.example.entities.StatusCode
 import org.example.services.AccessControlService
@@ -35,12 +35,14 @@ class SpringBootConsoleApplication: CommandLineRunner {
 
         exitProcess(AccessControlService().checkAccess(context).code)
     }
-}
 
-companion object {
-    @JvmStatic
-    fun main(args: Array<String>) {
-        runApplication<SpringBootConsoleApplication>(*args)
+    companion object {
+        @JvmStatic
+        fun main(args: Array<String>) {
+            runApplication<SpringBootConsoleApplication>(*args)
+        }
     }
 }
+
+
 
