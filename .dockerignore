@@ -1,0 +1,12 @@
+.git
+.gitignore
+.idea
+.github/
+*.md
+src/
+lib/
+build/
+bash/
+*.sh
+Dockerfile
+.dockerignore

@@ -1,0 +1,30 @@
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    login VARCHAR(50) NOT NULL UNIQUE,
+    password_hash VARCHAR(255) NOT NULL,
+    salt VARCHAR(32) NOT NULL,
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP NULL
+);
+
+CREATE TABLE resources (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    path VARCHAR(500) NOT NULL UNIQUE,
+    max_volume INT NOT NULL DEFAULT 0,
+    parent_id INT NULL,
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (parent_id) REFERENCES resources(id) ON DELETE SET NULL
+);
+
+CREATE TABLE permissions (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    resource_id INT NOT NULL,
+    can_read BOOLEAN NOT NULL DEFAULT FALSE,
+    can_write BOOLEAN NOT NULL DEFAULT FALSE,
+    can_execute BOOLEAN NOT NULL DEFAULT FALSE,
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+    FOREIGN KEY (resource_id) REFERENCES resources(id) ON DELETE CASCADE,
+    UNIQUE KEY unique_user_resource (user_id, resource_id)
+);
