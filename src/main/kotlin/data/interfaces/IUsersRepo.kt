@@ -1,5 +1,6 @@
 package data.interfaces
 
+
 import org.example.AccessControl.entities.User
 
 interface IUsersRepo {
@@ -9,4 +10,5 @@ interface IUsersRepo {
     fun add(user: User): Boolean
     fun update(user: User): Boolean
     fun delete(id: Int): Boolean
+    fun existsByLogin(login: String): Boolean
 }

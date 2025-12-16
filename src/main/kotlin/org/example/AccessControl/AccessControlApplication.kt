@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component
 import kotlin.system.exitProcess
 
 @SpringBootApplication
-class SpringBootConsoleApplication: CommandLineRunner {
+class SpringBootConsoleApplication(private val accessControlService: AccessControlService): CommandLineRunner {
     private val logger = LoggerFactory.getLogger(AccessControlService::class.java)
     override fun run(vararg args: String) {
         val parser = ArgParser("example")
@@ -38,7 +38,7 @@ class SpringBootConsoleApplication: CommandLineRunner {
         )
         // logger.info("while (True) \n print(\"Aboba\")")
         // print("while (True) \n print(\"Aboba\")") прикол от Стаса
-        val code = AccessControlService().checkAccess(context).code
+        val code = accessControlService.checkAccess(context).code
         logger.info(code.toString())
         exitProcess(code)
     }

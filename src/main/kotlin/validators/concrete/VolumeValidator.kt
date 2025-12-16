@@ -8,15 +8,19 @@ import org.springframework.stereotype.Service
 
 @Service
 class VolumeValidator : BaseValidator() {
+
     override fun handleSelf(context: ValidationContext): ValidationResult {
         val resource = context.targetResource ?:
-            return ValidationResult.Failure(StatusCode.NON_EXISTENT_RESOURCE)
-        if (context.volume > resource.maxVolume) { // Превышение объёма
+        return ValidationResult.Failure(StatusCode.NON_EXISTENT_RESOURCE)
+
+        if (context.volume > resource.maxVolume) {
             return ValidationResult.Failure(StatusCode.VOLUME_EXCEEDED)
         }
-        if (context.volume < 0) { // Некорректный объём
+
+        if (context.volume < 0) {
             return ValidationResult.Failure(StatusCode.INVALID_FORMAT)
         }
+
         return ValidationResult.Success
     }
 }

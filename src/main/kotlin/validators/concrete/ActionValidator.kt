@@ -9,11 +9,14 @@ import org.springframework.stereotype.Service
 
 @Service
 class ActionValidator : BaseValidator() {
+
     override fun handleSelf(context: ValidationContext): ValidationResult {
-        if (context.action !in setOf("READ", "WRITE", "EXECUTE")) {
-            return ValidationResult.Failure(StatusCode.UNKNOWN_ACTION)
+        return try {
+            val action = ResourceAction.valueOf(context.action.uppercase())
+            context.requiredResourceAction = action
+            ValidationResult.Success
+        } catch (e: IllegalArgumentException) {
+            ValidationResult.Failure(StatusCode.UNKNOWN_ACTION)
         }
-        context.requiredResourceAction = ResourceAction.valueOf(context.action)
-        return ValidationResult.Success
     }
 }
